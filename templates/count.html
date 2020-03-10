@@ -1,0 +1,21 @@
+<h1>Count</h1>
+
+<a href="{% url 'homepage' %}" >Go Back</a>
+<a href="{% url 'aboutpage' %}" >About us</a>
+<p>Paragraph: {{fulltext}} </p>
+
+<br >
+Count: {{wordlist}}
+
+<br >
+Count of used Word:
+<br />
+
+<<table>
+{% for word, countTotal in wordcount %}
+<tr>
+  <td>Word : "{{ word }}" </td>
+  <td>Count: {{ countTotal }} </td>
+</tr>
+{% endfor %}
+</table>
